@@ -1,0 +1,51 @@
+{
+  "name": "@keleshteri/xml-parser-nestjs",
+  "version": "1.0.16",
+  "description": "xml-parser nestjs",
+  "author": {
+    "name": "MMSK Keleshteri",
+    "email": "web.developer.keleshteri@gmail.com"
+  },
+  "contributors": [
+    {
+      "name": "MMSK Keleshteri",
+      "email": "web.developer.keleshteri@gmail.com"
+    }
+  ],
+  "main": "dist/index.js",
+  "files": [
+    "dist/**/*",
+    "*.md"
+  ],
+  "scripts": {
+    "build": "rimraf dist && tsc",
+    "prepublish": "npm run build",
+    "push": "npm run build && npm --no-git-tag-version version patch && git add . && git commit -m \"patch version\" && git push && npm publish --access public"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keleshteri/xml-parser-nestjs.git"
+  },
+  "bugs": "https://github.com/keleshteri/xml-parser-nestjs/issues",
+  "peerDependencies": {
+    "@nestjs/common": "^10.3.7"
+  },
+  "dependencies": {
+    "@nestjs/common": "^10.3.7",
+    "bcryptjs": "^2.4.3",
+    "fast-xml-parser": "^4.4.1",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.11",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.4.5"
+  }
+}
